@@ -1,0 +1,14 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    display: flex;
+}
+header {
+    padding: 50px;
+    text-align: center;
+    border-bottom-style: solid;
+}
+main {
+    display: flex;
+    flex-wrap: wrap;
+}
