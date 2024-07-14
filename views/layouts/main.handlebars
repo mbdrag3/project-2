@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pokemon collections</title>
+  <link rel="stylesheet" href="/css/jass.css">
+  <link rel="stylesheet" href="../../public/css/styles.css">
+</head>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Dex</title>
+        <link rel="stylesheet" href="/group-2-project-2/project-2/public/css/style.css">
+    </head>
+<body>
+    <div>
+        <header>
+            <nav>
+                {{#if logged_in}}
+                <a href="/home">Home</a> |
+                <button id="logout">logout</button>
+                {{else}}
+                <a href="/login">login or sign up</a>
+                {{/if}}
+            </nav>
+        </header>
+        <main>
+            {{{body}}}
+        </main>
+        <footer>
+
+        </footer>
+    </div>
+</body>
+</html>
