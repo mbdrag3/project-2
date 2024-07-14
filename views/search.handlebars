@@ -1,0 +1,38 @@
+<div class="search-container">
+    <h1>Search Pokémon Cards</h1>
+    <div class="filter-section">
+        <input type="text" id="search-input" placeholder="Search by name">
+        <select id="type-filter">
+            <option value="">All Types</option>
+            <option value="Water">Water</option>
+            <option value="Fire">Fire</option>
+            <option value="Grass">Grass</option>
+            <option value="Electric">Electric</option>
+            <option value="Ground">Ground</option>
+            <option value="Rock">Rock</option>
+            <option value="Steel">Steel</option>
+            <option value="Ice">Ice</option>
+            <option value="Dragon">Dragon</option>
+            <option value="Ghost">Ghost</option>
+            <option value="Psychic">Psychic</option>
+            <option value="Normal">Normal</option>
+            <option value="Fight">Fight</option>
+            <option value="Posion">Posion</option>
+            <option value="Bug">Bug</option>
+            <option value="Fly">Fly</option>
+            <option value="Dark">Dark</option>
+            <option value="Fairy">Fairy</option>
+       
+        </select>
+        <button onclick="filterCards()">Search</button>
+    </div>
+    <div id="cards-container">
+        {{#each pokemonCards}}
+        <div class="card">
+            <h2>{{name}}</h2>
+            <p>Type: {{type}}</p>
+            <p>HP: {{hp}}</p>
+        </div>
+        {{/each}}
+    </div>
+</div>
