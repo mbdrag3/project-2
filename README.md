@@ -1,5 +1,4 @@
-# Project 2
-
+# DigiDex
 
 
 ## Installation
