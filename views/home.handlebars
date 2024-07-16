@@ -1,35 +1,14 @@
-<body>
-    <div class="popular-container">
-        <h1>Popular Pokémon Cards</h1>
-        <div class="profile-dropdown">
-            <button onclick="toggleDropdown()">My Profile</button>
-            <div id="dropdown-content" class="dropdown-content">
-                <a href="/profile">View Profile</a>
-                <a href="/logout">Logout</a>
-            </div>
-        </div>
+<div class="navbar">
+    <header>
+        <h1>
+            DIGI DEX
+        </h1>
+        <div id="buttons">
+            <ul>
+                <li><button></button></li>
+            </ul>
 
-        <div class="cards-container">
-            {{#each popularCards}}
-            <div class="card">
-                <h2>{{name}}</h2>
-                <p>Type: {{type}}</p>
-                <p>HP: {{hp}}</p>
-            </div>
-            {{/each}}
         </div>
-    </div>
-
-    <div class="recent-container">
-        <h1>Recently Searched Pokémon Cards</h1>
-        <div class="cards-container">
-            {{#each recentCards}}
-            <div class="card">
-                <h2>{{name}}</h2>
-                <p>Type: {{type}}</p>
-                <p>HP: {{hp}}</p>
-            </div>
-            {{/each}}
-        </div>
-    </div>
-</body>
+    </header>
+    
+</div>
