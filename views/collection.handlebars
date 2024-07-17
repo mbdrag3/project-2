@@ -1,14 +1,6 @@
 <body>
     <div class="collection-container">
         <h2>My Pokémon Collection</h2>
-        <div class="profile-dropdown">
-            <button onclick="toggleDropdown()">My Profile</button>
-            <div id="dropdown-content" class="dropdown-content">
-                <a href="/profile">View Profile</a>
-                <a href="/logout">Logout</a>
-            </div>
-        </div>
-        
         <h2>My Cards</h2>
         <div class="cards-container">
             {{#each myCollection}}
@@ -29,6 +21,7 @@
                 <p>HP: {{hp}}</p>
             </div>
             {{/each}}
+                       <a href="/logout">Logout</a>
         </div>
     </div>
 </body>
