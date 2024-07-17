@@ -1,46 +1,39 @@
-
-    <div class="popular-container">
-        <h1>Popular Pokémon Cards</h1>
-        <div class="profile-dropdown">
-            <div id="dropdown-content" class="dropdown-content">
-                <a href="/collection">View Collection</a>
-                <a href="/logout">Logout</a>
-            </div>
-        </div>
-
-        <div class="search-div">
-            <h1>Search for a card!</h1>
+<body>
+    <div class="navbar">
+    <header>
+        <div id="buttons">
+            <h2>
+                  <ul>
+                <li><button id="search"><a href="/search">Search</a></button></li>
+                <li><button id="collection"><a href="/collection">Collections</a></button></li>
+            </ul>
+            </h2>
+          
+<div class="search-div">
+            <h2>Search for a card!</h2>
                 <div class="search-bar">
                     <input type="text" class="search-bar" id="search-input" placeholder="Search">
                     <button id="search-button"class="search-card-button">Search</button>
                 </div>
         </div>
 
-        <div class="cards-container">
-            {{#each popularCards}}
-            <div class="card">
-                <h2>{{name}}</h2>
-                <p>Type: {{type}}</p>
-                <p>HP: {{hp}}</p>
-            </div>
-            {{/each}}
-        </div>
-    </div>
-<div class="navbar">
-    <header>
-        <div id="buttons">
-            <ul>
-                <li><button id="popular"><a href="/popular">Popular Cards</a></button></li>
-                <li><button id="search"><a href="/search">Searched</a></button></li>
-                <li><button id="collection"><a href="/collection">Collections</a></button></li>
-                <li><button id="profile"><a href="">My Profile</a></button></li>
-            </ul>
-<body>
-
         </div>
 
     </div>
 <script src="/js/index.js"></script>
     </header>
+    <h2>
+ <nav>
+                    {{#if logged_in}}
+                        <a href="/home">Home</a> |
+                        <button id="logout">logout</button>
+                        {{else}}
+                        <a href="/login">login or sign up</a>
+                        {{/if}}
+            
+                    </nav>
+    </h2>
    
 </div>
+</body>
+
