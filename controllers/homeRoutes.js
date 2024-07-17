@@ -27,4 +27,12 @@ router.get('/login', (req, res) => {
     res.render('login');
   });
 
+  router.get('/search', (req,res) => {
+    try {
+        res.render('search')
+    } catch (err) {
+        res.status(500).json(err);
+    }
+  })
+
 module.exports = router;
