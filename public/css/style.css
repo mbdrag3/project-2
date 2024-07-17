@@ -19,6 +19,7 @@ main {
     display: flex;
     flex-wrap: wrap;
 }
+
 h1 {
     box-sizing: content-box;
     height: 0;
@@ -55,3 +56,4 @@ header ul li {
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
     background-color: khaki;
 }
+

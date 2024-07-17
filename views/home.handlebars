@@ -1,3 +1,4 @@
+
 <div class="navbar">
     <header>
         <div id="buttons">
@@ -7,6 +8,27 @@
                 <li><button id="collection"><a href="">Collections</a></button></li>
                 <li><button id="profile"><a href="">My Profile</a></button></li>
             </ul>
+<body>
+    <div class="popular-container">
+        <h1>Popular Pokémon Cards</h1>
+        <div class="profile-dropdown">
+            <div id="dropdown-content" class="dropdown-content">
+                <a href="/collection">View Collection</a>
+                <a href="/logout">Logout</a>
+            </div>
+        </div>
+
+        <div class="cards-container">
+            {{#each popularCards}}
+            <div class="card">
+                <h2>{{name}}</h2>
+                <p>Type: {{type}}</p>
+                <p>HP: {{hp}}</p>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+
 
         </div>
     </header>
