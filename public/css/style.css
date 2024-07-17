@@ -36,7 +36,7 @@ a {
     justify-content: center;
 }
 header #popular,
-header #sreach,
+header #search,
 header #collection,
 header #profile
 {
@@ -50,7 +50,7 @@ header ul li {
     display: inline-block;
 }
 #popular:hover,
-#sreach:hover,
+#search:hover,
 #collection:hover,
 #profile:hover{
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
