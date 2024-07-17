@@ -1,5 +1,5 @@
-
-<div class="navbar">
+<body>
+    <div class="navbar">
     <header>
         <div id="buttons">
             <h2>
@@ -9,11 +9,20 @@
             </ul>
             </h2>
           
-<body>
+<div class="search-div">
+            <h2>Search for a card!</h2>
+                <div class="search-bar">
+                    <input type="text" class="search-bar" id="search-input" placeholder="Search">
+                    <button id="search-button"class="search-card-button">Search</button>
+                </div>
+        </div>
 
         </div>
+
+    </div>
+<script src="/js/index.js"></script>
     </header>
-    <H2>
+    <h2>
  <nav>
                     {{#if logged_in}}
                         <a href="/home">Home</a> |
@@ -23,6 +32,8 @@
                         {{/if}}
             
                     </nav>
-    </H2>
+    </h2>
    
 </div>
+</body>
+
