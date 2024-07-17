@@ -18,6 +18,14 @@ router.get('/collection', (req,res)=> {
     }
 });
 
+router.get('/search', (req,res)=> {
+    try {
+        res.render('search')
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
+
 router.get('/login', (req, res) => {
     /* if (req.session.logged_in) {
       res.redirect('/profile');
