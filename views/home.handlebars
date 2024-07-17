@@ -1,3 +1,13 @@
+
+<div class="navbar">
+    <header>
+        <div id="buttons">
+            <ul>
+                <li><button id="popular"><a href="">Popular Cards</a></button></li>
+                <li><button id="sreach"><a href="">Sreached</a></button></li>
+                <li><button id="collection"><a href="">Collections</a></button></li>
+                <li><button id="profile"><a href="">My Profile</a></button></li>
+            </ul>
 <body>
     <div class="popular-container">
         <h1>Popular Pokémon Cards</h1>
@@ -19,16 +29,8 @@
         </div>
     </div>
 
-    <div class="recent-container">
-        <h1>Recently Searched Pokémon Cards</h1>
-        <div class="cards-container">
-            {{#each recentCards}}
-            <div class="card">
-                <h2>{{name}}</h2>
-                <p>Type: {{type}}</p>
-                <p>HP: {{hp}}</p>
-            </div>
-            {{/each}}
+
         </div>
-    </div>
-</body>
+    </header>
+    
+</div>

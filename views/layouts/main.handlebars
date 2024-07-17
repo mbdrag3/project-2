@@ -5,11 +5,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Pokemon collections</title>
 <link rel="stylesheet" href="/css/style.css">
+
+<link rel="stylesheet" href="/css/jass.css">
+
 </head>
     <body>
         <div>
             <header>
-                <nav>
+               <h1>
+                DIGI DEX
+               </h1>
+                </header>
+            <main>
+            {{{body}}}
+            </main>
+            <footer>
+ <nav>
                     {{#if logged_in}}
                         <a href="/home">Home</a> |
                         <button id="logout">logout</button>
@@ -17,12 +28,6 @@
                         <a href="/login">login or sign up</a>
                         {{/if}}
                     </nav>
-                </header>
-            <main>
-            {{{body}}}
-            </main>
-            <footer>
-
             </footer>
         </div>
     </body>

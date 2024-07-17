@@ -1,16 +1,59 @@
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
     display: flex;
+    justify-content: center;
+    font-size: medium;
+    
+
 }
 header {
-    padding: 50px;
+padding-bottom: 20px;
     text-align: center;
-    border-bottom-style: solid;
+    border-bottom-style: none;
+    background-color: rgb(172, 104, 237);
+    display: flex;
+    text-align: center;
+    justify-content: center;
 }
 main {
     display: flex;
     flex-wrap: wrap;
 }
 
+h1 {
+    box-sizing: content-box;
+    height: 0;
+    padding: 5px;
+    overflow: visible;
+    color: rgb(233, 210, 255);
+}
+hr {
+    box-sizing: content-box;
+    height: 0;
+
+}
+a {
+    justify-content: center;
+}
+header #popular,
+header #sreach,
+header #collection,
+header #profile
+{
+border: none;
+border-radius: 5px;
+padding: 10px 20px;
+margin: 1em;
+cursor: pointer;
+}
+header ul li {
+    display: inline-block;
+}
+#popular:hover,
+#sreach:hover,
+#collection:hover,
+#profile:hover{
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+    background-color: khaki;
+}
 
