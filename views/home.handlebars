@@ -3,14 +3,14 @@
     <header>
         <div id="buttons">
             <ul>
-                <li><button id="popular"><a href="">Popular Cards</a></button></li>
-                <li><button id="sreach"><a href="">Sreached</a></button></li>
-                <li><button id="collection"><a href="">Collections</a></button></li>
+                <li><button id="popular"><a href="/popular">Popular Cards</a></button></li>
+                <li><button id="search"><a href="/search">Searched</a></button></li>
+                <li><button id="collection"><a href="/collection">Collections</a></button></li>
                 <li><button id="profile"><a href="">My Profile</a></button></li>
             </ul>
 <body>
     <div class="popular-container">
-        <h1>Popular Pokémon Cards</h1>
+        <h2>Popular Pokémon Cards</h2>
         <div class="profile-dropdown">
             <div id="dropdown-content" class="dropdown-content">
                 <a href="/collection">View Collection</a>
@@ -18,19 +18,11 @@
             </div>
         </div>
 
-        <div class="cards-container">
-            {{#each popularCards}}
-            <div class="card">
-                <h2>{{name}}</h2>
-                <p>Type: {{type}}</p>
-                <p>HP: {{hp}}</p>
-            </div>
-            {{/each}}
-        </div>
+        
     </div>
 
 
         </div>
     </header>
-    
+   
 </div>
