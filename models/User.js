@@ -2,7 +2,11 @@ const { Model, DataTypes } = require('sequelize');
 const sequelize = require ('../config/connection.js');
 const argon2 = require('argon2');
 
-class User extends Model {}
+class User extends Model {
+    checkPassword(loginPw) {
+        return argon2.verify(loginPw, this.password);
+    }
+}
 
 User.init(
     {
@@ -15,6 +19,7 @@ User.init(
         username: {
             type: DataTypes.STRING,
             allowNull: false,
+            unique: true,
         },
         password: {
             type: DataTypes.STRING,
@@ -31,11 +36,17 @@ User.init(
         underscored: true,
         modelName: 'user',
         hooks: {
-            async beforeCreate(newUserData) {
-                newUserData.password = await argon2.hash(newUserData.password, 8);
+            beforeCreate: async (user) => {
+                if (user.password) {
+                    user.password = await argon2.hash(user.password);
+                }
+            },
+            beforeUpdate: async (user) => {
+                if (user.password) {
+                    user.password = await argon2.hash(user.password);
+                }
             }
         }
-    }
-);
+    });
 
 module.exports = User;
