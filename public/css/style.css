@@ -5,21 +5,24 @@ body {
     font-size: medium;
     margin: 0;
     padding: 0;
+    text-align: center;
+    align-items: center;
 }
 header {
     width: 100%;
 padding-bottom: 20px;
     text-align: center;
-    border-bottom-style: none;
     display: flex;
     text-align: center;
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
+    
 }
 main {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 h1 {
@@ -29,6 +32,8 @@ h1 {
     width: 100%;
     justify-content: center;
     align-items: center;
+    text-decoration: none;
+ 
 }
 a {
     justify-content: center;
@@ -59,10 +64,10 @@ header ul li {
 }
 h2
 {
-    justify-content: center;
-    align-items: center;
-    justify-self: center;
-
    display: flex; 
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+   justify-self: center;
 }
 

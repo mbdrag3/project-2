@@ -25,6 +25,13 @@ router.get('/search', (req,res)=> {
         res.status(500).json(err);
     }
 });
+router.get('/home', (req,res)=> {
+    try {
+        res.render('home')
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
 
 router.get('/login', (req, res) => {
     /* if (req.session.logged_in) {
