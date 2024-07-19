@@ -5,13 +5,13 @@ for (let i=0; i < collectionButton.length; i++) {
     event.preventDefault();
     const name = event.target.getAttribute('data-name');
     const id = event.target.getAttribute('data-id');
-    const img = event.target.getAttribute('data-img');
-    const type = event.target.getAttribute('data-type');
+    const image = event.target.getAttribute('data-img');
+    const types = event.target.getAttribute('data-type');
 
 
-    const response = fetch(`/`, {
+    const response = fetch(`/api/cards`, {
         method: 'POST',
-        body: JSON.stringify({ id, name, img, type}),
+        body: JSON.stringify({ id, name, image, types }),
         headers: {
             'Content-Type': 'application/json',
         }, 
@@ -22,6 +22,5 @@ for (let i=0; i < collectionButton.length; i++) {
       } else {
         alert(response.statusText);
       }
-
 })
 }
