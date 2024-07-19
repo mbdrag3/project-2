@@ -1,0 +1,20 @@
+[
+    {
+        "id": "det1-8",
+        "image": "https://images.pokemontcg.io/det1/8.png",
+        "name": "Magikarp",
+        "types": "Water"
+    },
+    {
+        "id": "basep-1",
+        "image": "https://images.pokemontcg.io/basep/1.png",
+        "name": "Pikachu",
+        "types": "Lightning"
+    },
+    {
+        "id": "ex14-10",
+        "image": "https://images.pokemontcg.io/ex14/10.png",
+        "name": "Sableye",
+        "types": "Darkness"
+    }
+]
