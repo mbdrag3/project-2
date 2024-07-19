@@ -1,17 +1,17 @@
 let collectionButton = document.getElementsByClassName('collection-button');
 
-const id = document.querySelector('.card-id');
-const image = document.querySelector('.card-image');
-const name = document.querySelector('.card-title');
-const types = document.querySelector('card-title');
-
 for (let i=0; i < collectionButton.length; i++) {
     collectionButton[i].addEventListener('click', function (event) {
     event.preventDefault();
+    const name = event.target.getAttribute('data-name');
+    const id = event.target.getAttribute('data-id');
+    const img = event.target.getAttribute('data-img');
+    const type = event.target.getAttribute('data-type');
+
 
     const response = fetch(`/`, {
         method: 'POST',
-        body: JSON.stringify({ id, name, image, types}),
+        body: JSON.stringify({ id, name, img, type}),
         headers: {
             'Content-Type': 'application/json',
         }, 
