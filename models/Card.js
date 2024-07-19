@@ -10,6 +10,7 @@ Card.init(
             type: DataTypes.STRING,
             allowNull: false,
             primaryKey: true,
+            unique: true,
         },
         image: {
             type: DataTypes.STRING,
