@@ -18,11 +18,32 @@ router.get('/collection', (req,res)=> {
     }
 });
 
-router.get('/search', (req,res)=> {
+router.get('/search/:searchedPokemon', (req,res)=> {
     try {
-        res.render('search')
+        const url = `https://api.pokemontcg.io/v2/cards?q=name:${req.params.searchedPokemon}&pageSize=24`;
+        const key = 'd2443ada-80ff-4382-b87e-5b56e378b92c';
+    
+    
+        fetch(url, {
+            headers: {
+                'Authorization': `Bearer ${key}`
+            }
+        }).then(response => {
+            return response.json();
+        }).then(data => {
+            console.log(data.data);
+            res.render('search', {
+                pokemonCards: data.data
+            });
+
+        }).catch(error => {
+            console.log(error)
+        })
+
     } catch (err) {
+        console.log(err)
         res.status(500).json(err);
+        
     }
 });
 router.get('/home', (req,res)=> {

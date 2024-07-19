@@ -10,6 +10,7 @@ Card.init(
             type: DataTypes.STRING,
             allowNull: false,
             primaryKey: true,
+            unique: true,
         },
         image: {
             type: DataTypes.STRING,
@@ -20,7 +21,7 @@ Card.init(
             allowNull: false,
         },
         types: {
-            type: DataTypes.ARRAY(DataTypes.STRING),
+            type: DataTypes.STRING,
             allowNull: false,
         },
         user_id: {
