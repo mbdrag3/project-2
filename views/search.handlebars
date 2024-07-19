@@ -22,17 +22,28 @@
             <option value="Fly">Fly</option>
             <option value="Dark">Dark</option>
             <option value="Fairy">Fairy</option>
-       
+
         </select>
         <button onclick="filterCards()">Search</button>
     </div> --}}
     <div id="cards-container">
         {{#each pokemonCards}}
-        <div class="card">
+        {{!-- <div class="card">
             <h2>{{name}}</h2>
             <p>Type: {{toString types}}</p>
             <p>HP: {{hp}}</p>
+        </div> --}}
+
+        <div class="cards" style="width: 18rem;">
+            <img src="{{images.small}}" class="card-image" alt="{{name}}">
+            <div class="card-body">
+                <h5 class="card-title">{{name}}</h5>
+                <h6 class="card-id">{{id}}</h6>
+                <p class="card-types">{{types}}</p>
+                <button id="add-collection-button" class="btn btn-primary collection-button">Add to collection</button>
+            </div>
         </div>
         {{/each}}
     </div>
 </div>
+<script src="/js/add-collection.js"></script>

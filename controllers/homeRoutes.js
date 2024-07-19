@@ -20,7 +20,7 @@ router.get('/collection', (req,res)=> {
 
 router.get('/search/:searchedPokemon', (req,res)=> {
     try {
-        const url = `https://api.pokemontcg.io/v2/cards?q=name:${req.params.searchedPokemon}&pageSize=10`;
+        const url = `https://api.pokemontcg.io/v2/cards?q=name:${req.params.searchedPokemon}&pageSize=24`;
         const key = 'd2443ada-80ff-4382-b87e-5b56e378b92c';
     
     
