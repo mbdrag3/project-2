@@ -1,3 +1,8 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body {
     font-family: sans-serif;
     justify-content: center;
@@ -16,7 +21,6 @@ header {
     
 }
 main {
-    display: flex;
     flex-wrap: wrap;
     justify-content: center;
     width: 100%;
@@ -25,7 +29,6 @@ main {
 h1 {
     align-items: center;
     text-decoration: none;
-
  
 }
 a {
@@ -66,8 +69,9 @@ h2
 }
 header h1 a
 {
-    color: rgb(0, 23, 43);
+    color: aliceblue;
     text-decoration: none;
+    text-shadow: -1px -1px 0 #000, 2px -1px 0 #000, -1px 2px 0 #000, 2px 2px 0 #000;
 }
 header #top 
 {
