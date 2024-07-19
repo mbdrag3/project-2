@@ -81,13 +81,13 @@ router.get('/me', withAuth, async (req,res) => {
 
 router.delete('/:id', async (req,res) => {
     try {
-        const userData = await Card.destroy({
+        const userData = await User.destroy({
             where: {
                 id: req.params.id,
             }
         });
         if (!userData) {
-            res.status(404).json({ message: "No card found with this id" });
+            res.status(404).json({ message: "No user found with this id" });
             return;
         }
 
