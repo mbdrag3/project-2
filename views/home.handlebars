@@ -6,11 +6,18 @@
                   <ul>
                 <li><button id="search"><a href="/search">Search</a></button></li>
                 <li><button id="collection"><a href="/collection">Collections</a></button></li>
+                 {{#if logged_in}}
+                        <li><a href="/home"><button>Home</button></a></li>
+                        <button id="logout">logout</button>
+                        {{else}}
+                        <li><button id="login"><a href="/login">login or sign up</a><button></button></li>
+                        {{/if}}
+            
             </ul>
             </h2>
           
 <div class="search-div">
-            <h2>Search for a card!</h2>
+            <h3>Search for a card!</h3>
                 <div class="search-bar">
                     <input type="text" class="search-bar" id="search-input" placeholder="Search">
                     <button id="search-button"class="search-card-button">Search</button>
@@ -22,17 +29,6 @@
     </div>
 <script src="/js/index.js"></script>
     </header>
-    <h2>
- <nav>
-                    {{#if logged_in}}
-                        <a href="/home">Home</a> |
-                        <button id="logout">logout</button>
-                        {{else}}
-                        <a href="/login">login or sign up</a>
-                        {{/if}}
-            
-                    </nav>
-    </h2>
    
 </div>
 </body>
