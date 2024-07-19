@@ -3,6 +3,7 @@ const routes = require('./controllers');
 const exphbs = require('express-handlebars');
 const path = require('path');
 const helpers = require('./utils/helpers')
+const sequelize = require('./config/connection')
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -19,5 +20,5 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(routes);
 
 sequelize.sync({ force: false }).then(() => {
-    app.listen(PORT, () => console.log('Now listening'));
+    app.listen(PORT, () => console.log('DigiDex now listening!'));
   });

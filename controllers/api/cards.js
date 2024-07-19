@@ -29,7 +29,7 @@ router.get('/:id', async (req,res) => {
 
 router.post('/', async (req, res) => {
     try {
-      const cardData = await Location.create(req.body);
+      const cardData = await Card.create(req.body);
       res.status(200).json(cardData);
     } catch (err) {
       res.status(400).json(err);
