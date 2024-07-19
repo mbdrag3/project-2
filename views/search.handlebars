@@ -1,6 +1,6 @@
 <div class="search-container">
-    <h2>Search Pokémon Cards</h2>
-    <div class="filter-section">
+    <h2>Search Results</h2>
+    {{!-- <div class="filter-section">
         <input type="text" id="search-input" placeholder="Search by name">
         <select id="type-filter">
             <option value="">All Types</option>
@@ -25,12 +25,12 @@
        
         </select>
         <button onclick="filterCards()">Search</button>
-    </div>
+    </div> --}}
     <div id="cards-container">
         {{#each pokemonCards}}
         <div class="card">
             <h2>{{name}}</h2>
-            <p>Type: {{type}}</p>
+            <p>Type: {{toString types}}</p>
             <p>HP: {{hp}}</p>
         </div>
         {{/each}}
