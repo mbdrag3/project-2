@@ -24,6 +24,7 @@ main {
     flex-wrap: wrap;
     justify-content: center;
     width: 100%;
+    text-align: center;
 }
 
 h1 {
@@ -83,15 +84,3 @@ div #buttons
 {
     width: 100%;
 }
-=======
-
-#cards-container {
-    display:flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.card-body {
-    
-}
-
