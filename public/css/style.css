@@ -91,8 +91,8 @@ div #buttons
     justify-content: center;
 }
 
-.card {
-    margin: 15px
+.cards {
+    margin: 15px;
 }
 
 h3 {
@@ -100,4 +100,34 @@ h3 {
 }
 .input-group{
     padding-top: 6px;
+}
+
+#logo-png {
+    max-width: 550px;
+    max-height: 250px;
+}
+
+.search-div {
+    padding-top: 50px
+}
+
+.collection-button {
+    background-color: rgb(184, 41, 41); 
+    border: none;
+    color: white; 
+    padding: 15px 32px; 
+}
+
+.collection-button:hover{
+    background-color: #45a049; 
+}
+
+.collection-button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(2px);
+}
+
+.card-image {
+    max-height: 325px;
 }
