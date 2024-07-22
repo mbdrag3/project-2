@@ -84,3 +84,9 @@ div #buttons
 {
     width: 100%;
 }
+h3 {
+    padding: 10px;
+}
+.input-group{
+    padding-top: 6px;
+}
