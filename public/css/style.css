@@ -94,3 +94,10 @@ div #buttons
 .card {
     margin: 15px
 }
+
+h3 {
+    padding: 10px;
+}
+.input-group{
+    padding-top: 6px;
+}
