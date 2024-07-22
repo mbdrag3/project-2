@@ -1,5 +1,8 @@
 const router = require('express').Router();
 
+const { Card } = require('../models')
+
+
 router.get('/', async (req, res) => {
 
     try {
@@ -10,9 +13,19 @@ router.get('/', async (req, res) => {
 
 });
 
-router.get('/collection', (req,res)=> {
+router.get('/collection', async (req,res)=> {
     try {
-        res.render('collection')
+        const cardCollection = await Card.findAll({ where : {
+            user_id: req.session.user_id
+        } })
+
+        const cards = cardCollection.map((card) => card.get({ plain: true }));
+        console.log(`THIS IS THE CONSOLE RESPONSE: ${JSON.stringify(cards, null, 2)}`);
+
+
+        res.render('collection', {
+            cards
+        })
     } catch (err) {
         res.status(500).json(err);
     }

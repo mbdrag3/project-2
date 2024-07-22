@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { Card } = require('../../models');
 
+
 router.get('/', async (req, res) => {
     try {
       const cardData = await Card.findAll();
@@ -29,7 +30,11 @@ router.get('/:id', async (req,res) => {
 
 router.post('/', async (req, res) => {
     try {
-      const cardData = await Card.create(req.body);
+      const userId = req.session.user_id;
+
+      const userCollection = { ...req.body, user_id : userId }
+
+      const cardData = await Card.create(userCollection);
       res.status(200).json(cardData);
     } catch (err) {
       res.status(400).json(err);

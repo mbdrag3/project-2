@@ -4,7 +4,7 @@ const argon2 = require('argon2');
 
 class User extends Model {
     checkPassword(loginPw) {
-        return argon2.verify(loginPw, this.password);
+        return argon2.verify(this.password, loginPw);
     }
 }
 
