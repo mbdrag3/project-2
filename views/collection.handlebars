@@ -3,24 +3,24 @@
         <h2>My Pokémon Collection</h2>
         <h3>My Cards</h3>
         <div class="cards-container">
-            {{#each myCollection}}
+            {{#each cards}}
             <div class="card">
                 <h2>{{name}}</h2>
-                <p>Type: {{type}}</p>
-                <p>HP: {{hp}}</p>
+                <p>Type: {{types}}</p>
+                <img src="{{image}}" alt="{{name}}">
             </div>
             {{/each}}
         </div>
 
         <h3>Wanted Cards</h3>
-        <div class="cards-container">
+        {{!-- <div class="cards-container">
             {{#each wantedCards}}
             <div class="card">
                 <h2>{{name}}</h2>
                 <p>Type: {{type}}</p>
                 <p>HP: {{hp}}</p>
             </div>
-            {{/each}}
+            {{/each}} --}}
                        <a href="/logout">Logout</a>
         </div>
     </div>

@@ -11,13 +11,13 @@ for (let i=0; i < collectionButton.length; i++) {
 
     const response = fetch(`/api/cards`, {
         method: 'POST',
-        body: JSON.stringify({ id, name, image, types }),
+        body: JSON.stringify({ id : id, name : name, image : image, types : types }),
         headers: {
             'Content-Type': 'application/json',
         }, 
     });
 
-    if (response.ok) {
+    if (response) {
         alert('Congrats! Added to collection!')
       } else {
         alert(response.statusText);
