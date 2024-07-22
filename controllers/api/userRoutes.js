@@ -15,8 +15,10 @@ router.post('/signup', async (req,res) => {
 
             res.status(200).json(newUser);
         });
+        res.render('home') //sends person back home
+
     } catch (err) {
-        console.log(err)
+        console.log(`ERROR: ${err}`)
         res.status(500).json(err);
     }
 });
@@ -41,7 +43,7 @@ router.post('/login', async (req,res) => {
             return;
         }
 
-        req.session.ssave(() => {
+        req.session.save(() => {
             req.session.user_id = user.id;
             req.session.logged_in = true;
 
