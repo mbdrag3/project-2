@@ -4,10 +4,10 @@
         <h3>My Cards</h3>
         <div class="cards-container">
             {{#each cards}}
-            <div class="card">
+            <div class="cards">
                 <h2>{{name}}</h2>
                 <p>Type: {{types}}</p>
-                <img src="{{image}}" alt="{{name}}">
+                <img class="card-image" src="{{image}}" alt="{{name}}">
             </div>
             {{/each}}
         </div>
