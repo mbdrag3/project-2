@@ -1,17 +1,18 @@
 const loginFormHandler = async (event) => {
     event.preventDefault();
-    const username = document.querySelector('#username-login')
-    const password = document.querySelector('#password-login')
+    const username = document.querySelector('#login-username')
+    const password = document.querySelector('#login-password')
     
-    if (email && password) {
-        const response = await fetch('', {
+    if (username && password) {
+        const response = await fetch(`/api/user/login`, {
             method: 'POST',
-            body: JSON.stringify({ username, password}),
-            headers:{ 'Content-Type' : 'application/json'},
+            body: JSON.stringify({ username, password }),
+            headers: { 'Content-Type' : 'application/json' },
+
         
         });
         if (response.ok) {
-            document.location.replace( );
+            document.location.replace('/');
         }else {
             alert (response.statusText);
         }
@@ -21,20 +22,22 @@ const loginFormHandler = async (event) => {
  
 const signupFormHandler = async (event) => {
     event.preventDefault(); 
-    const name = document.querySelector('#username-signup').value.trim();
-    const password = document.querySelector('#password-signup').value.trim();
+    const username = document.querySelector('#signup-username').value.trim();
+    const password = document.querySelector('#signup-password').value.trim();
 
     if (username && password) {
-        const response = await fetch ('',{
+        const response = await fetch (`/api/user/signup`,{
             method: 'POST',
-            body: JSON.stringify({username, password}),
-            headers: { 'Content-Type' : 'appliction/json'},
+            body: JSON.stringify({username, password }),
+            headers: { 'Content-Type' : 'application/json' },
+
         });
         if (response.ok) {
-            document.location.replace('/profile');
+            document.location.replace('/');
 
         } else {
-            alert(response.statusText);
+            alert('Error signing up. Contact site owner.');
+            console.log(`${username} & ${password}`)
         }
     }
 }
