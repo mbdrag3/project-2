@@ -8,11 +8,36 @@ body {
     
 }
 main {
-    display: block;
-    display: flex;
+    align-self: center;
+    align-items: center;
+    justify-self: center;
 }
 
 h1 {
     font-size: 3em;
     margin: 0.50em 0 ;
+}
+a{
+    background-color: transparent;
+}
+b,
+strong
+{
+    font-weight: bolder;
+}
+button,
+input,
+optgroup,
+select,
+textarea{
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
+}
+button,
+[type='button'],
+[type='submit']{
+    border-style:none;
+    padding: 0;
 }
